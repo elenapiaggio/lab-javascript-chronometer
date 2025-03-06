@@ -5,6 +5,7 @@ class Chronometer {
   }
 
   start(callback) {
+    console.log('start metodo!!!')
     this.intervalId = setInterval(() => {
       this.currentTime++;
       if (callback) {
@@ -26,14 +27,17 @@ class Chronometer {
   }
 
   stop() {
+    console.log('STOP metodo!!!')
     clearInterval(this.intervalId);
   }
 
   reset() {
+    console.log('*** RESET metodo!!!');
     this.currentTime = 0;
   }
 
   split() {
+    console.log('*** SPLIT metodo!!!');
     const min = this.computeTwoDigitNumber(this.getMinutes());
     const seg = this.computeTwoDigitNumber(this.getSeconds());
     return `${min}:${seg}`;
