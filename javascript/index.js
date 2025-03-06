@@ -49,7 +49,7 @@ function printSplit() {
 }
 
 function clearSplits() {
-  // ... your code goes here
+  splitsElement.innerHTML = '';
 }
 
 function setStartBtn() {
@@ -70,7 +70,6 @@ function setSplitBtn() {
   btnRightElement.classList.remove('split');
   btnRightElement.classList.add('reset');
   btnRightElement.textContent = 'RESET';
-
   printSplit();
 }
 
@@ -79,11 +78,11 @@ function setResetBtn() {
   btnRightElement.classList.add('split');
   btnRightElement.textContent = 'SPLIT';
   chronometer.reset();
+  clearSplits();
 }
 
 // Start/Stop Button
 btnLeftElement.addEventListener('click', () => {
-
   // cuando clico en botón start, debo de cambiar  STOP
   if (btnLeft.getAttribute('class') === 'btn start') {
     setStartBtn();
