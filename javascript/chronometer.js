@@ -40,6 +40,7 @@ class Chronometer {
     console.log('*** SPLIT metodo!!!');
     const min = this.computeTwoDigitNumber(this.getMinutes());
     const seg = this.computeTwoDigitNumber(this.getSeconds());
+    console.log(`${min}:${seg}`)
     return `${min}:${seg}`;
   }
 }
